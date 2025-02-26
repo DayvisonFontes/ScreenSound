@@ -1,17 +1,15 @@
-﻿Album albumSoad = new Album();
-albumSoad.Nome = "Toxicity";
+﻿Episodio ep1 = new(1, "Técnicas de facilitação", 45);
+ep1.AdicionarConvidados("Dayvison");
+ep1.AdicionarConvidados("Giovanna");
+Console.WriteLine(ep1.Resumo);
 
-Musica musica1 = new Musica();
-musica1.Nome = "Chop suey";
-musica1.Duracao = 10;
+Episodio ep2 = new(1, "Técnicas de aprendizado", 50);
+ep2.AdicionarConvidados("Joao");
+ep2.AdicionarConvidados("Maria");
+Console.WriteLine(ep2.Resumo);
 
-Musica musica2 = new Musica();
-musica2.Nome = "Toxicity";
-musica2.Duracao = 5;
+Podcast pd1 = new("Técnicas", "Cleber");
+pd1.AdicionarEpisodio(ep1);
+pd1.AdicionarEpisodio(ep2);
 
-albumSoad.AdicionarMusica(musica1);
-albumSoad.AdicionarMusica(musica2);
-
-Banda SOAD = new Banda();
-SOAD.AdicionarAlbum(albumSoad);
-SOAD.ExibirDiscografia();
+pd1.ExibirDetalhes();
